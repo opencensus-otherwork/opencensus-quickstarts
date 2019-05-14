@@ -8,7 +8,7 @@ import (
 	"log"
 	"time"
 
-	"go.opencensus.io/exporter/zipkin"
+	"contrib.go.opencensus.io/exporter/zipkin"
 	"go.opencensus.io/trace"
 
 	openzipkin "github.com/openzipkin/zipkin-go"
