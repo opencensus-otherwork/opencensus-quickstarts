@@ -17,7 +17,7 @@ import (
 
 func main() {
 	// 1. Configure exporter to export traces to Zipkin.
-	localEndpoint, err := openzipkin.NewEndpoint("go-quickstart", "192.168.1.5:5454")
+	localEndpoint, err := openzipkin.NewEndpoint("go-quickstart", "localhost:5454")
 	if err != nil {
 		log.Fatalf("Failed to create the local zipkinEndpoint: %v", err)
 	}
