@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@opencensus/exporter-zipkin": "0.0.19",
-    "@opencensus/nodejs": "0.0.19"
+    "@opencensus/exporter-zipkin": "^0.0.19",
+    "@opencensus/nodejs": "^0.0.19"
   }
 }
