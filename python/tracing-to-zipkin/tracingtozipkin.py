@@ -33,9 +33,9 @@ def doWork():
         print("doing busy work")
         try:
             time.sleep(0.1)
-            with tracer.span(name="insideDoWork") as x:
-                print("inside")
-                x.add_annotation("leggo")
+            with tracer.span(name="insideDoWork") as inner_span:
+                print("inside do work")
+                inner_span.add_annotation("inner span inside do work")
         except:
             # 6. Set status upon error
             span.status = Status(5, "Error occurred")
