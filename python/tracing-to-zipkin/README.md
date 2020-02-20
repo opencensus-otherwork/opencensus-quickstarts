@@ -9,7 +9,7 @@
 8. Click Find Traces, and you should see a trace.
 9. Click into that, and you should see the details.
 
-![](python-tracing-zipkin.png)
+![](images/python-tracing-zipkin.png)
 
 #### How does it work?
 ```py
@@ -103,3 +103,31 @@ An [annotation](https://opencensus.io/tracing/span/time_events/annotation/) tell
 # 7. Annotate our span to capture metadata about our operation
 span.add_annotation("invoking doWork")
 ```
+
+#### Insight on trace Id and span Id 
+
+![](images/main.png)
+
+main() starts with a span named main:
+* traceId is set here
+* spanId is set here
+ 
+main() calls dowork() that has a span named dowork:
+* same traceId as main 
+* spanId unique 
+* parentId is main's spanId 
+ 
+ ![](images/dowork.png)
+
+
+ 
+Inside span dowork, a new span insidedowork is created:
+* same traceId as main, dowork 
+* sspanId is unique 
+* parentId is dowork's spanId 
+ 
+Back to main() to call dowork() again
+* same traceId as main, prev dowork(),  prev insidedowork
+* spanId is unique
+* parentId is main's spanId 
+
