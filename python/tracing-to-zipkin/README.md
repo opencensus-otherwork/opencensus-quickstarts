@@ -125,7 +125,8 @@ Inside span dowork, a new span insidedowork is created:
 * same traceId as main, dowork 
 * sspanId is unique 
 * parentId is dowork's spanId 
- 
+
+
 Back to main() to call dowork() again
 * same traceId as main, prev dowork(),  prev insidedowork
 * spanId is unique
