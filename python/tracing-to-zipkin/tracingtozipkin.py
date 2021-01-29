@@ -8,7 +8,7 @@ import sys
 from opencensus.trace.tracer import Tracer
 from opencensus.trace import time_event as time_event_module
 from opencensus.ext.zipkin.trace_exporter import ZipkinExporter
-from opencensus.trace.samplers import always_on
+from opencensus.trace.samplers as always_on
 
 # 1a. Setup the exporter
 ze = ZipkinExporter(service_name="python-quickstart",
